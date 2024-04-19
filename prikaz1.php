@@ -37,14 +37,14 @@
                     </tr>
                 </thead>
                 <?php
-                    // URL of the XML file
+                    // URL pot do XML datoteke
                     $url = 'http://www.arso.gov.si/xml/vode/hidro_podatki_zadnji.xml';
-                    // Load the XML data from the URL
+                    // Naloži XML podatke iz URL naslova
                     $xml = simplexml_load_file($url);
-                    // Loop through each 'postaja' element
+                    // Zanka za vsak element 'postaja'
                     foreach ($xml->postaja as $postaja) {
                         $temperature = (string)$postaja->temp_vode;
-                        // Check if the temperature is null or empty
+                        // Preveri če je temperatura null or empty
                         if (empty($temperature)) {
                             $stationCode = $postaja['sifra'];
                             $river = $postaja->reka;
