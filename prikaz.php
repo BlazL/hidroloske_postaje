@@ -47,7 +47,7 @@
                     <th>Datum</th>
                 </tr>
                 <?php
-                    // URL naslov XML file
+                    // URL naslov XML datoteke
                     $url = 'http://www.arso.gov.si/xml/vode/hidro_podatki_zadnji.xml';
                     // Naloži XML podatke iz URL naslova
                     $xml = simplexml_load_file($url);
