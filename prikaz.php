@@ -47,21 +47,21 @@
                     <th>Datum</th>
                 </tr>
                 <?php
-                    // URL of the XML file
+                    // URL naslov XML file
                     $url = 'http://www.arso.gov.si/xml/vode/hidro_podatki_zadnji.xml';
-                    // Load the XML data from the URL
+                    // Naloži XML podatke iz URL naslova
                     $xml = simplexml_load_file($url);
-                    // Loop through each 'postaja' element
+                    // Zanka za vsak element 'postaja'
                     foreach ($xml->postaja as $postaja) {
                         $temperature = (string)$postaja->temp_vode;
-                        // Check if the temperature is null or empty
+                        // Preveri ali je temperatura null oz. empty
                         if (empty($temperature)) {
                             $stationCode = $postaja['sifra'];
                             $river = $postaja->reka;
                             $measurementPoint = $postaja->merilno_mesto;
                             $shortName = $postaja->ime_kratko;
                             $date = $postaja->datum;
-                            // Output the station details in a table row
+                            // Prikaz podatkov v vrstici tabele
                             echo "<tr>";
                             echo "<td>$stationCode</td>";
                             echo "<td>$river</td>";
