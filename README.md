@@ -1,1 +1,1 @@
-Prikaz Hidrološki postaj in temperatura vode.
+Prikaz hidroloških postaj.
