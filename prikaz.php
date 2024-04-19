@@ -30,15 +30,15 @@
     </style>
 </head>
 <body>
-    <div class="p-8">
+    <div>
         <!-- Ustvari div element v katerem bo prikazan zemljevid -->
         <div>
-            <h1 class="text-center text-2xl">Pregled - Hidrološka kontrola</h1>
+            <h1>Pregled - Hidrološka kontrola</h1>
         </div>
-        <div id="map" class="mt-8"></div>
+        <div id="map></div>
         <div>
             <h3>Izklopljeni senzori</h3>
-            <table class="table-auto w-full mt-4 bg-white shadow-md rounded-lg overflow-hidden">
+            <table>
                 <tr>
                     <th>Koda postaje</th>
                     <th>Reka</th>
